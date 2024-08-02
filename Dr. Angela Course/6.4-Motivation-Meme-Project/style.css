@@ -1,0 +1,23 @@
+h1{
+    font-family: libre baskerville;
+    text-transform: uppercase;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #fff;
+}
+.post{
+    max-width: 50%;
+    margin: auto;
+    padding: 10%;
+}
