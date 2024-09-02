@@ -1,0 +1,18 @@
+# Capstone Project 2 - Personal website
+
+
+##svg
+
+##Icons
+
+##Images
+
+##Style Guide
+-Typography: font family, font sizes, font color,
+-Color:
+-
+
+## Text:
+
+I am Kiran
+Software Developer
