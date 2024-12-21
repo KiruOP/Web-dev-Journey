@@ -1,0 +1,19 @@
+{
+  "name": "its_a_cat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Kiran",
+  "license": "ISC",
+  "description": "This project shows a random cat fact along with a random cat background image.",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}

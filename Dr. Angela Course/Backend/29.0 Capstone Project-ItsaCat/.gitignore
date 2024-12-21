@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Environment variables
+.env
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore coverage reports if using any testing tool that generates them
+coverage/
+
+# Ignore compiled EJS files (if caching is enabled)
+*.ejs~
+
+# Ignore specific IDE or editor files
+.idea/
+.vscode/
+*.swp
+
+# Ignore build or cache folders
+.cache/
+dist/
+build/

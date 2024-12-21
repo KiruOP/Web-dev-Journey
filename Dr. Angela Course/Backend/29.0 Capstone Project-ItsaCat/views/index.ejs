@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It’s a Cat</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body style="background-image: url('<%= catImage %>')">
+    <div class="fact-container">
+        <% if (locals.catFact) { %>
+            <p class="cat-fact">
+                <%= catFact %>
+            </p>
+            <% } else { %>
+                <p class="error">
+                    <%= error %>
+                </p>
+                <% } %>
+    </div>
+    <div class="refresh-btn">
+        <a href="/">Get Another Fact</a>
+    </div>
+</body>
+
+</html>
