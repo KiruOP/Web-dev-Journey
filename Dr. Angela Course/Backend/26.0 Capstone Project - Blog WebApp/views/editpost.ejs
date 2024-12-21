@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+<div class="form-container">
+    <h2 class="form-heading">Edit a Blog</h2>
+    <form action="/posts/<%= id %>" method="post">
+
+        <!-- Image Upload -->
+        <label for="editImage" class="form-label">Upload Image:</label>
+        <input type="file" id="editImage" name="newImage" accept="image/*" class="image-input" disabled>
+
+        <label for="editpost-title" class="form-label">Blog Title:</label>
+        <input type="text" id="editpost-title" name="newTitle" value="<%= title %>" class="title-input" required>
+
+        <label for="editpost-content" class="form-label">Post Content:</label>
+        <textarea id="editpost-content" name="newContent" rows="10" class="content-input"><%= content %></textarea>
+
+        <input type="submit" value="Publish Blog"  class="publish-button">
+    </form>
+</div>
+<%- include("partials/footer.ejs") %>

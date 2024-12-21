@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+    <h1 class="main-heading">Blog Posts</h1>
+    <div class="container">
+        <% if (locals.posts) { %>
+            <% posts.forEach(post=> { %>
+                <% if (post.title && post.description) { %>
+
+                    <div class="post-card">
+                        <img src="https://placehold.co/460x80" alt="#" class="card-image">
+                        
+                        <h2>
+                            <b>
+                                <%= post.title %>
+                            </b>
+                        </h2>
+                        <p>
+                            <%= post.description %>
+                        </p>
+                        <a href="/posts/<%= post.title %>" class="readMore">READ FULL BLOG</a>
+                        <div class="actions">
+                                <a href="/posts/<%= post.id %>/edit" id="actionEdit">Edit</a>
+                                <a href="/posts/<%= post.id %>/delete" id="actionDelete">Delete</a>
+                            
+                        </div>
+                    </div>
+
+                    <% } %>
+                        <% }); %>
+                            <% } else { %>
+                                <p>No posts found</p>
+                                <% } %>
+
+
+    </div>
+
+    <%- include("partials/footer.ejs") %>

@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<div class="contact-form-container">
+  <h2>Contact Me</h2>
+  <form action="/submit-contact" method="POST">
+    
+    <!-- Name Field -->
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="title-input" id="name" name="name" placeholder="Your name" required>
+
+    <!-- Email Field -->
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="title-input" id="email" name="email" placeholder="Your email" required>
+
+    <!-- Subject Field -->
+    <label for="subject" class="form-label">Subject</label>
+    <input type="text" class="title-input" id="subject" name="subject" placeholder="Subject" required>
+
+    <!-- Message Field -->
+    <label for="message" class="form-label">Message</label>
+    <textarea id="message" class="content-input" name="message" rows="6" placeholder="Your message here..." required></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" class="publish-button">Send Message</button>
+    
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

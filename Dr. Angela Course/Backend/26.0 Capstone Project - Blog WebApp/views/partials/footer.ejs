@@ -1,0 +1,19 @@
+</main>
+<footer>
+    <p>Copyright © <%= new Date().getFullYear(); %> by Kiran
+    </p>
+</footer>
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-items ul');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+        menu.classList.toggle('open');
+    }
+</script>
+</body>
+
+</html>
