@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Read Books</title>
+    <style>
+        .container{
+            height: fit-content;
+            width: 100vw;
+
+        }
+        .bookCardList{
+            height: fit-content;
+            width: 400px;
+            font-size: 14px;
+            background-color: rosybrown;
+            border-radius: 10px;
+            border: 0.5px solid black;
+        }
+        .form{
+            display: none;
+        }
+        .active{
+            display: inline-flex;
+            flex-direction: column;
+        }
+        .btn{
+            padding: 10px 15px;
+            border-radius: 8px;
+            background-color: lightsalmon;
+            color: black;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="addform" action="/add" method="post" class="form" >
+            <input type="text" name="bookTitle">
+            <input type="text" name="bookAuthor">
+            <input type="date" name="bookReadDate">
+            <input type="number" name="bookRatings">
+            <input type="text" name="bookReviews">
+            <input type="text" name="bookSummary">
+            <button type="submit" name="">Submit</button>
+        </form>
+        <div class="btn" id="add">Add New Book</div>
+        <% for(let book of books) { %>
+        <div class="bookCardList">
+            <h2><%= book.title  %></h2>
+            <p><%= book.author  %></p>
+            <p><%= book.read_date  %></p>
+            <p><%= book.ratings  %></p>
+            <p><%= book.reviews  %></p>
+            <p><%= book.summary  %></p>
+            <div class="btn edit">Edit</div>
+            <form action="/edit?id=<%= book.id %>" method="post" class="form editform">
+                <input type="text" name="editbookTitle" value="<%= book.title  %>">
+                <input type="text" name="editbookAuthor" value="<%= book.author  %>">
+                <input type="date" name="editbookReadDate" value="<%= book.read_date  %>">
+                <input type="number" name="editbookRatings" value="<%= book.ratings  %>">
+                <input type="text" name="editbookReviews" value="<%= book.reviews  %>">
+                <input type="text" name="editbookSummary" value="<%= book.summary  %>">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <% } %>
+    </div>
+    <script>
+        const add = document.querySelector("#add");
+        const addform = document.querySelector("#addform");
+        add.addEventListener("click", () => {
+            addform.classList.add("active");
+        })
+        const edit = document.querySelector(".edit");
+        const editform = document.querySelector(".editform");
+        edit.addEventListener("click", () => {
+            editform.classList.add("active");
+        })
+    </script>
+</body>
+</html>
