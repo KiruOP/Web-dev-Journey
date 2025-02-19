@@ -1,0 +1,230 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: #9bd2b2;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: lightyellow;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: fit-content;
+    width: 100vw;
+}
+
+.back-btn {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.book-details {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.book-cover img {
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-info {
+    margin-left: 20px;
+}
+
+.book-title {
+    font-size: 26px;
+    margin: 5px 0;
+    font-family: sans-serif;
+}
+
+.book-info p {
+    margin: 3px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: lightsalmon;
+    color: black;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+    color: wheat;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(37 36 36 / 70%);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+input, textarea {
+    width: -webkit-fill-available;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: darkolivegreen;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #218838;
+    color: wheat;
+}
+
+.bookCardList {
+    height: fit-content;
+    width: 400px;
+    font-size: 14px;
+    background-color: rosybrown;
+    border-radius: 10px;
+    border: 0.5px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.list_container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.bookGrid {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+}
+
+.bookCard {
+    width: 150px;
+}
+
+.bookCover:hover {
+    transform: scale(1.01);
+}
+
+.bookCover {
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+    border-radius: 5px;
+}
+
+.bookTitle {
+    font-size: 0.8em;
+    margin: 3px 0;
+    font-family: sans-serif;
+}
+
+.bookAuthor {
+    font-size: 0.7em;
+    margin: 3px 0;
+    color: #666;
+}
+
+.bookRating {
+    font-size: 0.7em;
+    margin: 3px 0;
+    color: #ffa500;
+}
+
+
+.book-summary h2 {
+    margin: 5px 0;
+    font-size: 20px;
+    color: darkgoldenrod;
+}
+
+.book-summary p {
+    margin: 5px 8px 10px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: dimgray;
+    font-family: serif;
+}
+
+.book-rating i {
+    color: #ffcc00;
+}
+
+.popup-content h2 {
+    padding: 10px 15px !important;
+    font-size: 20px;
+    margin: 0;
+    background-color: dimgray;
+    color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-content form label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.popup-content form {
+    width: auto;
+    margin: 20px;
+    margin-top: 10px;
+}

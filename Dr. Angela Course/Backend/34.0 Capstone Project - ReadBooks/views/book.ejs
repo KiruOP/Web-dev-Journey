@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= book.title %> - Book Details</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+
+        <div class="book-details">
+            <div class="book-cover">
+                <img src="<%= book.cover_url %>" alt="<%= book.title %> Cover">
+            </div>
+            <div class="book-info">
+                <h1 class="book-title"><%= book.title %></h1>
+                <p class="book-author"><strong>Author:</strong> <%= book.author %></p>
+                <p class="book-date"><strong>Readed On:</strong> <%= book.reads_date %></p>
+                <p class="book-rating">
+                    <strong>Rating:</strong>
+                    <% for (let i = 0; i < book.ratings; i++) { %>
+                        <i class="fa-solid fa-star"></i>
+                    <% } %>
+                    <% for (let i = book.ratings; i < 5; i++) { %>
+                        <i class="fa-regular fa-star"></i>
+                    <% } %>
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="actions">
+                    <button class="btn edit-btn" onclick="openPopup('editPopup')">
+                        <i class="fas fa-pencil-alt"></i> Edit
+                    </button>
+                    <a href="/delete/<%= book.id %>" class="btn delete-btn">
+                        <i class="fas fa-trash"></i> Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-summary">
+            <h2>Reviews</h2>
+            <p><%= book.reviews %></p>
+            <h2>Synopsis</h2>
+            <p><%= book.summary %></p>
+        </div>
+    </div>
+
+    <!-- Edit Book Popup -->
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('editPopup')">&times;</span>
+            <h2>Edit Book</h2>
+            <form action="/edit" method="post">
+                <input type="hidden" name="updatedItemId" value="<%= book.id %>">
+                <label>Title:</label>
+                <input type="text" name="editbookTitle" value="<%= book.title %>" required>
+
+                <label>Author:</label>
+                <input type="text" name="editbookAuthor" value="<%= book.author %>" required>
+
+                <label>Read Date:</label>
+                <input type="date" name="editbookReadDate" value="<%= book.read_date %>" required>
+
+                <label>Rating:</label>
+                <input type="number" name="editbookRatings" value="<%= book.ratings %>" min="1" max="5" required>
+
+                <label>Review:</label>
+                <textarea name="editbookReviews"><%= book.reviews %></textarea>
+
+                <label>Summary:</label>
+                <textarea name="editbookSummary"><%= book.summary %></textarea>
+
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+<%- include('./partials/footer.ejs') %>
