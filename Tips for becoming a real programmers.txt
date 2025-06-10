@@ -1,0 +1,11 @@
+1. Utilize a project management tool for planning and estimating tasks from inception to launch.
+2. Use GitHub for version control and create branches for multiple features and versions.
+3. Collaborate effectively with team members, not just focus on coding.
+4. Adhere strictly to deadlines.
+5. Regularly reflect on your actions and their purposes.
+6. Follow the DRY (Don't Repeat Yourself) principle by writing reusable code.
+7. Research solutions using online resources such as Google and Stack Overflow.
+8. Review both your own code and others’ code, seek feedback, and debug accordingly.
+9. Analyze others’ code to gain insights into real-world coding practices.
+10. Test the code using various methods.
+11. Deploy the code on a cloud platform.
